@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<AssemblyName>Sidub.Platform.Cryptography.AzureKeyVault</AssemblyName>
+		<RootNamespace>Sidub.Platform.Cryptography</RootNamespace>
+
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+		<!-- Workaround: https://github.com/dotnet/sourcelink - Azure Repos not supporting symbol packages -->
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\icon.png" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\LICENSE.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\LICENSE-AGPLV3.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\LICENSE-PROPRIETARY.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\PRIVACY.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\TERMS.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\CONTRIBUTING.txt" Pack="true" PackagePath="\" Visible="False" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" Visible="False" />
+
+		<PackageReference Include="Azure.Security.KeyVault.Keys" Version="4.6.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.2" />
+		<PackageReference Include="Sidub.Platform.Authentication.Http" Version="1.0.18" />
+		<PackageReference Include="Sidub.Platform.Cryptography" Version="1.0.9" />
+		<PackageReference Include="Sidub.Platform.Storage" Version="1.0.19" />
+		<PackageReference Include="Sidub.Platform.Storage.Http" Version="1.0.26" />
+	</ItemGroup>
+
+</Project>
